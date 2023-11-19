@@ -13,6 +13,10 @@ public class Documento {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getRuta() {
         return ruta;
     }

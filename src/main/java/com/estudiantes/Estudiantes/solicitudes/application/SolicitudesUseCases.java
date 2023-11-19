@@ -1,8 +1,6 @@
 package com.estudiantes.Estudiantes.solicitudes.application;
 
-import com.estudiantes.Estudiantes.solicitudes.domain.Solicitud;
-import com.estudiantes.Estudiantes.solicitudes.domain.SolicitudesPorTipoRepository;
-import com.estudiantes.Estudiantes.solicitudes.domain.SolicitudesRepository;
+import com.estudiantes.Estudiantes.solicitudes.domain.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +17,7 @@ public class SolicitudesUseCases {
         return this.solicitudesRepository.getSolicitudes();
     }
 
-    public List<Solicitud> getSolicitudesPpendientes(){
+    public List<Solicitud> getSolicitudesPendientes(){
         return this.solicitudesRepository.getSolicitudesPendientes();
     }
 
@@ -27,7 +25,7 @@ public class SolicitudesUseCases {
         return this.solicitudesPorTipoRepository.getSolicitudesPorTipo();
     }
 
-    public List<Solicitud> find(Integer id){
+    public Solicitud find(Integer id){
         return this.solicitudesRepository.find(id);
     }
 
@@ -35,5 +33,15 @@ public class SolicitudesUseCases {
         return  this.solicitudesRepository.saveSolicitud(solicitud);
     }
 
+    public List<Documento> saveDocumento(Documento documento, Integer idSolicitud){
+        return this.solicitudesRepository.saveDocumento(documento, idSolicitud);
+    }
 
+    public List<Estado> saveEstado(Estado estado, Integer idSolicitud){
+        return this.solicitudesRepository.saveEstado(estado, idSolicitud);
+    }
+
+    public  Solicitud saveSolicitudCompleta(Solicitud solicitud, Estado estado, Documento documento){
+        return this.solicitudesRepository.saveSolicitudCompleta(solicitud, estado, documento);
+    }
 }

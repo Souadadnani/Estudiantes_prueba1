@@ -6,7 +6,9 @@ public interface SolicitudesRepository {
 
     List<Solicitud> getSolicitudes();
     List<Solicitud> getSolicitudesPendientes();
-    List<Solicitud> find(Integer id);
+    Solicitud find(Integer id);
     Solicitud saveSolicitud(Solicitud solicitud);
-
+    List<Documento> saveDocumento(Documento documento, Integer idSolicitud);
+    List<Estado> saveEstado(Estado estado, Integer idSolicitud);
+    Solicitud saveSolicitudCompleta(Solicitud solicitud, Estado estado, Documento documento);
 }
