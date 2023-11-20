@@ -30,7 +30,7 @@ public class SolicitudesUseCases {
     }
 
     public Solicitud saveSolicitud(Solicitud solicitud){
-        return  this.solicitudesRepository.saveSolicitud(solicitud);
+        return this.solicitudesRepository.saveSolicitud(solicitud);
     }
 
     public List<Documento> saveDocumento(Documento documento, Integer idSolicitud){

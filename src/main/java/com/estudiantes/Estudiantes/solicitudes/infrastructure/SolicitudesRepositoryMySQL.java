@@ -91,7 +91,6 @@ public class SolicitudesRepositoryMySQL implements SolicitudesRepository, Solici
             ps.setInt(1, solicitud.getIdEstudiante());
             ps.setString(2, solicitud.getTipo());
             ps.executeUpdate();
-
             ResultSet rs = ps.getGeneratedKeys();
             while (rs.next()){
                 solicitud.setId(rs.getInt(1));

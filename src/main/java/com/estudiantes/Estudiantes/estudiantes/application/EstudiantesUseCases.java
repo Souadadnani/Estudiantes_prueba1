@@ -16,7 +16,7 @@ public class EstudiantesUseCases {
         return this.estudiantesRepository.getEstudiantes();
     }
 
-    public void saveEstudiante(Estudiante estudiante){
-        this.estudiantesRepository.saveEstudiante(estudiante);
+    public Estudiante saveEstudiante(Estudiante estudiante){
+        return this.estudiantesRepository.saveEstudiante(estudiante);
     }
 }

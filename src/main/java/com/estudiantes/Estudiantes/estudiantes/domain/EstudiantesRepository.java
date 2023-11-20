@@ -6,5 +6,5 @@ public interface EstudiantesRepository {
 
     List<Estudiante> getEstudiantes();
 
-    void saveEstudiante(Estudiante estudiante);
+    Estudiante saveEstudiante(Estudiante estudiante);
 }
